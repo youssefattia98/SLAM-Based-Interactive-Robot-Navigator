@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+	<node name="user" pkg="ass3" type="controller.py"  output="screen"  />
+	<node name="case_one" pkg="ass3" type="case_one.py"  />
+	<node name="kb" pkg="ass3" type="kb_ctr.py"  output="screen" />
+</launch>
