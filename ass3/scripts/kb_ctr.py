@@ -10,12 +10,12 @@ import os   #call in terminal
 def SSR(req):
     if req.keyboard_case == 1:
        #call keyboard teleop w/o obstacle avoidance
-       print("calling teleop twist keyboard")
+       print("Calling teleop twist keyboard")
        os.system("roslaunch ass3 case_two.launch") 
        
     elif req.keyboard_case == 2:
         #call keyboard teleop and the osbstacle avoidance
-        print("calling teleop twist keyboard with obstacle avoidance control")
+        print("Calling teleop twist keyboard with obstacle avoidance control")
         os.system("roslaunch ass3 case_three.launch")
     else:
         print("Incorrect input")
@@ -25,14 +25,11 @@ def kb_server():
     #print general information about the node
     print("Keyboard controlling for robot...")
     #initialize the node
-    print("i will iniate the kb node")
     rospy.init_node('keyboard_controller')
-    print("i insiated the node")
     s = rospy.Service('kb_input_srv' ,KB_input_srv ,SSR) #server service routine
-    print("service ready")
+    #print("service ready")
     rospy.spin()
 
 #main
 if __name__=="__main__":
-    print("i am kb controller and will call kb_server")
     kb_server()

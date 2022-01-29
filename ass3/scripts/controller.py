@@ -11,19 +11,15 @@ def case1():
     cordinates_srv = rospy.ServiceProxy('cordinates_srv', Cordinates_srv)
     rt = cordinates_srv(x , y)
     if rt.return_ == 1:
-        print("target reached successfully!")
+        print("Target reached successfully!")
     else:
-        print("target not reached")
+        print("Target not reached")
 
 def case2():
     print("case 2")
-    print("i will wait for service")
     rospy.wait_for_service('kb_input_srv')
-    print("finished waiting")
     kb_input_srv = rospy.ServiceProxy('kb_input_srv', KB_input_srv)
-    print("used the service proxy thing")
     kb_input_srv(1)
-    print("finished ur stupid function")
 
 def case3():
     print("case 3")
@@ -60,4 +56,4 @@ if __name__=="__main__":
             print("press ctrl-C to quit")
         else:
             #worng choice
-            print("wrong choice")
+            print("Wrong choice")

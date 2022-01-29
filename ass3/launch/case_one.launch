@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-    <node name="user" pkg="ass3" type="controller.py"  output="screen"  />
-    <node name="case_one" pkg="ass3" type="case_one.py"  output="screen" launch-prefix="xterm -e"/>
-    <node name="kb" pkg="ass3" type="kb_ctr.py"  output="screen" launch-prefix="xterm -e" />
-</launch>
