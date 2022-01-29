@@ -60,5 +60,5 @@ Graphs of node and services
 https://user-images.githubusercontent.com/69837845/151676908-20da9d25-f871-45e3-bbac-c1fe4be5ec13.mp4
 
 
-The speed up video below shows the robot behaving in the environment doing its intended task, this simulation can run for ever in which the robot will stay in this loop. Furthermore, this assignment enhanced my skills in using Linux, docker, GitHub, ROS and Cpp and I am very happy with the output I have reached.
-Finally, I really wanted to mention how much I enjoyed working on this project with my collages.
+The speed up video above shows the robot behaving in the environment doing its intended task, also shows the thre diffrent cases that the user can show for the robot.  
+Furthermore, this assignment enhanced my skills in using Linux, docker, GitHub, ROS and Cpp and I am very happy with the output I have reached.
