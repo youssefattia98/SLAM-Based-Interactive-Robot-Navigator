@@ -2,7 +2,7 @@
 Assignment 3 for Research Track course, the project consists of a simulation in which a robot can operate in three different modes according to the user choice. Either Autonomous mode of going to a specific correnaties that the user choice or manual mode driving with or without obstacle avoidance.
 This repo consists of the following points:  
  1)How to Setup the Simulator.   
- 2)Algorithm used to solve the problem, truth table and graphs.  
+ 2)Nodes and servcies graphs.  
  3)Final output.   
 
 1)How to Setup the Simulator.  
@@ -26,9 +26,25 @@ $ sudo roslaunch ass3 launcheverything.launch
 ```
 
 
-2)Algorithm used to solve the problem and flowchart. 
+2)Nodes and servcies graphs. 
 ================================
-to be written. 
+As the controller works in three diffrent modes according to the user choice.
+Firslty, the bash scripts starts the simualtion along with a roslaunch file which is launcheverything.launch, this lauch file runs controller.py, case_one.py and kb_ctr.py.
+Secondly, the controller.py askes the user for his/her choice which are as follow:
+
+```python
+print("1) autonomously reach a x,y coordinate provided by the user")
+print("2) drive the robot using the keyboard")
+print("3) drive the robot using the keyboard with collisions avoidance")
+print("4) quit the program")
+```
+For choice one, the user gets asked for the coordinates he/she whishes the robot to reach and are sent through the service called "Cordinates_srv" in which case_one.py receives these coordinates message and drive the robot to it and in return send 1 or 0 if the robot reached its destination or not.
+
+For choice two, will wait for service (KB_input_srv) and send to it 1 this message will make the kb_ctr.py run the command roslaunch for case_two.launch which will start the (teleop_twist_keyboard.py) controlling the robot manually
+
+For choice three, same as choice two but roslaunch for case_three.launch which not only runs (teleop_twist_keyboard.py) but also (case_three.py) and (remap_cmd_vel) which controllers the robot with obsticale avoidance.
+
+Lastly, the following graphs shows how the nodes are communicating with each other and what services are running in each case.
 
 Graphs of node and services
 ---------
@@ -38,13 +54,11 @@ Graphs of node and services
 ![immagine](https://github.com/youssefattia98/Research-Track-Assignment-3/blob/main/3.png)
 
 
-To be edited: The above Flowchart describes more details the communication between the ROS nodes and how data is transferred. Note that, the client can control the speed of the robot to a certain limit to assure that the robot will never crash and if the user chooses to increase the speed more than this limits the simulation will reset with minimum speed. Also, if the user input any wrong input then that he should the simulation will reset the robots position and speed.
-
 3)Final Output. 
 ================================
 
 https://user-images.githubusercontent.com/69837845/151676908-20da9d25-f871-45e3-bbac-c1fe4be5ec13.mp4
 
 
-to be editied The speed up video below shows the robot behaving in the environment doing its intended task, this simulation can run for ever in which the robot will stay in this loop. Furthermore, this assignment enhanced my skills in using Linux, docker, GitHub, ROS and Cpp and I am very happy with the output I have reached.
+The speed up video below shows the robot behaving in the environment doing its intended task, this simulation can run for ever in which the robot will stay in this loop. Furthermore, this assignment enhanced my skills in using Linux, docker, GitHub, ROS and Cpp and I am very happy with the output I have reached.
 Finally, I really wanted to mention how much I enjoyed working on this project with my collages.
