@@ -1,6 +1,6 @@
 # Research Track Assignment 3 description:
 
-Please Also find also the sphinx documentation here: https://youssefattia98.github.io/Research-Track-I-3/
+Please Also find also the sphinx documentation here: https://youssefattia98.github.io/Research-Track-I-3/  
 Assignment 3 for Research Track course, the project consists of a simulation in which a robot can operate in three different modes according to the user choice. Either Autonomous mode of going to a specific correnaties that the user choice or manual mode driving with or without obstacle avoidance.
 This repo consists of the following points:  
  1)How to Setup the Simulator.   
