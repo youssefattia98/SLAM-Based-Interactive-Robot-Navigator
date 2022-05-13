@@ -1,5 +1,20 @@
 #! /usr/bin/env python
+"""
+.. module:: case_one
+    :platform: Unix
+    :synopsis: Python code for case one
+.. moduleauthor:: Youssef Attia youssef-attia@live.com
 
+Service:
+    /cordinates_srv
+        
+Messages:
+    /move_base_msgs
+    /actionlib_msgs
+
+This node handles the first case which is *autonomously reach a x,y coordinate provided by the user*
+if chossen by the user in the controller script
+"""
 import rospy
 from ass3.srv import Cordinates_srv
 import actionlib
@@ -7,14 +22,20 @@ from move_base_msgs.msg import *
 from actionlib_msgs.msg import *
  
 
-#read the request provided by the user
-#create a goal (using user's data)
-#send the goal and wait for a result
-#a timeout is set to prevent infinite waiting in case the target is out of the range
-#of the robot
-#if the target is reached or if the timeout is over the service return to user_controller 
-#if the target is not reached call cancel_goal for the action
+
 def SSR(req):
+    """
+    This Function is Service Routine Function and it does the following:
+    1) Read the request provided by the user from :mod 'controller'.
+    2) Create a goal using the user data.
+    3) Sends the goal and waits for the result.
+    4) A timeout is used to prevent infinite waiting in case the target is out of the range of the robot.
+    5) If the target is reached or if the timeout is over the service return to user_controller.
+    6)if the target is not reached call cancel_goal for the action.
+
+    Topic:
+        /move_base
+    """
     x = req.x
     y = req.y
     print("moving to X: ",x," Y: ",y)
@@ -40,6 +61,12 @@ def SSR(req):
     return 1 #if reahced the target
 
 def coordinates_srv():
+    """
+    This Function is to setup the node and also call the server service routine function.
+
+    Service:
+        /cordinates_srv
+    """
     print("Autonomous node.")
     rospy.init_node('coordinate_controller') #seting up the node
     s = rospy.Service('cordinates_srv' ,Cordinates_srv ,SSR) #calling server service routine

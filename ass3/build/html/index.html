@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to RT1_FinalAssigemnt’s documentation! &mdash; RT1_FinalAssigemnt 15/03/2022 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> RT1_FinalAssigemnt
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to RT1_FinalAssigemnt’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#module-scripts.controller">User Interface Module</a></li>
+<li><a class="reference internal" href="#module-scripts.case_one">Modality one Module</a></li>
+<li><a class="reference internal" href="#module-scripts.kb_ctr">Modality two Module</a></li>
+<li><a class="reference internal" href="#module-scripts.case_three">Modality three Module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">RT1_FinalAssigemnt</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to RT1_FinalAssigemnt’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="welcome-to-rt1-finalassigemnt-s-documentation">
+<h1>Welcome to RT1_FinalAssigemnt’s documentation!<a class="headerlink" href="#welcome-to-rt1-finalassigemnt-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="module-scripts.controller">
+<span id="user-interface-module"></span><h1>User Interface Module<a class="headerlink" href="#module-scripts.controller" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-controller"></span><dl class="simple">
+<dt>Service:</dt><dd><p>/cordinates_srv
+/kb_input_srv</p>
+</dd>
+</dl>
+<p>This node implements an user interface and launches other luanch files and runs other .py files</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.controller.case1">
+<span class="sig-prename descclassname"><span class="pre">scripts.controller.</span></span><span class="sig-name descname"><span class="pre">case1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/controller.html#case1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.controller.case1" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is to handle to first case which is: <em>autonomously reach a x,y coordinate provided by the user</em>
+It askes the user to enter the x and y cordinates and send these cordinates to the service.</p>
+<dl class="simple">
+<dt>Service:</dt><dd><p>/cordinates_srv</p>
+</dd>
+</dl>
+<p>If 1 is returned from the service then the robot had reached its target else it did not.
+This is handled by :mod ‘case_one’</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.controller.case2">
+<span class="sig-prename descclassname"><span class="pre">scripts.controller.</span></span><span class="sig-name descname"><span class="pre">case2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/controller.html#case2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.controller.case2" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is to handle to Second case which is: <em>drive the robot using the keyboard</em>
+It uses the Service to take the keyboard bottoms pressed by the user to move the robot.</p>
+<dl class="simple">
+<dt>Service:</dt><dd><p>/kb_input_srv</p>
+</dd>
+</dl>
+<p>This is handled by :mod ‘kb_ctr’</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.controller.case3">
+<span class="sig-prename descclassname"><span class="pre">scripts.controller.</span></span><span class="sig-name descname"><span class="pre">case3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/controller.html#case3"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.controller.case3" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is to handle to Third case which is: <em>drive the robot using the keyboard with collisions avoidance</em>
+It uses the Service to take the keyboard bottoms pressed by the user to move the robot.</p>
+<dl class="simple">
+<dt>Service:</dt><dd><p>/kb_input_srv</p>
+</dd>
+</dl>
+<p>It can also avoid the collision of the robot and this is handled by :mod ‘kb_ctr’
+If the message sent to the service is 2 the controle of the robot has obstacle avoidance capabilities <em>ON</em>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scripts.case_one">
+<span id="modality-one-module"></span><h1>Modality one Module<a class="headerlink" href="#module-scripts.case_one" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-case_one"></span><dl class="simple">
+<dt>Service:</dt><dd><p>/cordinates_srv</p>
+</dd>
+<dt>Messages:</dt><dd><p>/move_base_msgs
+/actionlib_msgs</p>
+</dd>
+</dl>
+<p>This node handles the first case which is <em>autonomously reach a x,y coordinate provided by the user</em>
+if chossen by the user in the controller script</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.case_one.SSR">
+<span class="sig-prename descclassname"><span class="pre">scripts.case_one.</span></span><span class="sig-name descname"><span class="pre">SSR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/case_one.html#SSR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.case_one.SSR" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is Service Routine Function and it does the following:
+1) Read the request provided by the user from :mod ‘controller’.
+2) Create a goal using the user data.
+3) Sends the goal and waits for the result.
+4) A timeout is used to prevent infinite waiting in case the target is out of the range of the robot.
+5) If the target is reached or if the timeout is over the service return to user_controller.
+6)if the target is not reached call cancel_goal for the action.</p>
+<dl class="simple">
+<dt>Topic:</dt><dd><p>/move_base</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.case_one.coordinates_srv">
+<span class="sig-prename descclassname"><span class="pre">scripts.case_one.</span></span><span class="sig-name descname"><span class="pre">coordinates_srv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/case_one.html#coordinates_srv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.case_one.coordinates_srv" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is to setup the node and also call the server service routine function.</p>
+<dl class="simple">
+<dt>Service:</dt><dd><p>/cordinates_srv</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scripts.kb_ctr">
+<span id="modality-two-module"></span><h1>Modality two Module<a class="headerlink" href="#module-scripts.kb_ctr" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-kb_ctr"></span><dl class="simple">
+<dt>Service:</dt><dd><p>/kb_input_srv</p>
+</dd>
+</dl>
+<p>This node handles the Second and the third case which are <em>drive the robot using the keyboard</em> and <em>drive the robot using the keyboard with collisions avoidance</em>
+if chossen by the user in the controller script</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.kb_ctr.SSR">
+<span class="sig-prename descclassname"><span class="pre">scripts.kb_ctr.</span></span><span class="sig-name descname"><span class="pre">SSR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/kb_ctr.html#SSR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.kb_ctr.SSR" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is Service Routine Function and it does the following:
+1) Read the request provided by the user from :mod ‘controller’.
+2) If receives 1 then its case two else if it receives 2 then its case three <em>same as case two but with obstacle avoidance</em>
+3) If Its case two it runs the roslaunch file for :mod ‘case_two’
+4) If Its case three it runs the roslaunch file for :mod ‘case_three’</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.kb_ctr.kb_server">
+<span class="sig-prename descclassname"><span class="pre">scripts.kb_ctr.</span></span><span class="sig-name descname"><span class="pre">kb_server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/kb_ctr.html#kb_server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.kb_ctr.kb_server" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is to setup the node and also call the server service routine function.</p>
+<dl class="simple">
+<dt>Service:</dt><dd><p>/kb_input_srv</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scripts.case_three">
+<span id="modality-three-module"></span><h1>Modality three Module<a class="headerlink" href="#module-scripts.case_three" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-case_three"></span><dl class="simple">
+<dt>Messages:</dt><dd><p>/Twist
+/Vector3
+/LaserScan</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.case_three.callingback_map">
+<span class="sig-prename descclassname"><span class="pre">scripts.case_three.</span></span><span class="sig-name descname"><span class="pre">callingback_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/case_three.html#callingback_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.case_three.callingback_map" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is only to set the data as the same value of the repost which is recived from the Twist</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.case_three.callingback_scans">
+<span class="sig-prename descclassname"><span class="pre">scripts.case_three.</span></span><span class="sig-name descname"><span class="pre">callingback_scans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/case_three.html#callingback_scans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.case_three.callingback_scans" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is responsible for the obstacle avoidance in which it dvides the
+data that comes from the laser scanner into three ranges <em>left, middle and right</em>
+and then checks:
+1) if something is near to the right then the repost.angular = 0
+2)if something is near to the left then the repost.angular = 0
+3)if something is near to the Front then the  repost.linear = 0</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.case_three.keyboard_input">
+<span class="sig-prename descclassname"><span class="pre">scripts.case_three.</span></span><span class="sig-name descname"><span class="pre">keyboard_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/case_three.html#keyboard_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.case_three.keyboard_input" title="Permalink to this definition"></a></dt>
+<dd><p>This Function is to subscribe to the Twist and LaserScan topic and call Service routine functions <em>callingback_map &amp; callingback_scans</em></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Youssef Attia.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
