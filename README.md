@@ -1,4 +1,4 @@
-# Research Track Assignment 3 description:
+# Research Track Assignment 3 description (jupter):
 
 Please Also find also the sphinx documentation here: https://youssefattia98.github.io/Research-Track-I-3/  
 
